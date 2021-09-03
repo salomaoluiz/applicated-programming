@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
+
+import Home from '@screens/home';
 
 function App() {
-  return (
-    <div>
-      <h2>Hello World 2</h2>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
