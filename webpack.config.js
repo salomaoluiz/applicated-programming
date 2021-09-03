@@ -7,15 +7,17 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index.bundle.js',
+    publicPath: '/',
   },
   devServer: {
     port: 4000,
     watchContentBase: true,
+    historyApiFallback: true,
   },
   resolve: {
     alias: {
       '@screens': path.resolve(__dirname, 'src', 'screens'),
-      '@src': path.resolve(__dirname, 'src')
+      '@src': path.resolve(__dirname, 'src'),
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
@@ -34,7 +36,7 @@ module.exports = {
       },
     ],
   },
-  
+
   plugins: [
     new HtmlWebpackPlugin({ template: './static/index.html' }),
     new MiniCssExtractPlugin(),
