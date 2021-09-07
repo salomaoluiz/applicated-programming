@@ -59,14 +59,20 @@
       "@routes/*": [
         "src/routes/*"
       ],
-      "@locale/*": [
-        "src/locale/*"
-      ],
       "@store/*": [
         "src/store/*"
       ],
       "@assets/*": [
         "src/assets/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@locales/*": [
+        "src/locales/*"
+      ],
+      "@locales": [
+        "src/locales"
       ],
       "@src": [
         "src"

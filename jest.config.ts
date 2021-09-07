@@ -26,11 +26,7 @@ export default {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-    'src/locales/pt-br',
-    'src/locales/en-us',
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/'],
 
   // Indicates which provider should be used to instrument code for coverage
   // coverageProvider: "babel",
@@ -73,19 +69,20 @@ export default {
   // ],
 
   // An array of file extensions your modules use
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
-    '@screens/*': './src/screens/*',
-    '@components/*': './src/components/*',
-    '@containers/*': './src/containers/*',
-    '@routes/*': './src/routes/*',
-    '@locale/*': './src/locale/*',
-    '@store/*': './src/store/*',
-    '@assets/*': './src/assets/*',
-    'src/*': './src/*',
+    '^@screens(.*)$': '<rootDir>/src/screens/$1',
+    '^@components(.*)$': '<rootDir>/src/components/$1',
+    '^@containers(.*)$': '<rootDir>/src/containers/$1',
+    '^@routes(.*)$': '<rootDir>/src/routes/$1',
+    '^@locales(.*)$': '<rootDir>/src/locales/$1',
+    '^@store(.*)$': '<rootDir>/src/store/$1',
+    '^@assets(.*)$': '<rootDir>/src/assets/$1',
+    '^@utils(.*)$': '<rootDir>/src/utils/$1',
+    '^@src(.*)$': '<rootDir>/src/$1',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -119,7 +116,7 @@ export default {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-  // rootDir: undefined,
+  rootDir: './',
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [

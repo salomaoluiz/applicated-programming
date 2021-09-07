@@ -26,7 +26,8 @@ module.exports = {
     // disable the rule for all files
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-console': 'warn',
-    'no-unused-vars': 'error',
+    'no-unused-vars': 'off',
+    "@typescript-eslint/no-unused-vars": ["error"],
     'object-curly-spacing': ['error', 'always'],
     semi: 'error',
     'react/display-name': 'off',
@@ -38,7 +39,7 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           'module',
-          '/^@(screens|components|containers|routes|locale|store|assets)|src/',
+          '/^@(screens|components|containers|routes|locales|store|assets|utils|src)/',
           ['parent', 'sibling', 'index'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
