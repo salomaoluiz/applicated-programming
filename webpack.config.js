@@ -17,6 +17,12 @@ module.exports = {
   resolve: {
     alias: {
       '@screens': path.resolve(__dirname, 'src', 'screens'),
+      '@components': path.resolve(__dirname, 'src', 'components'),
+      '@containers': path.resolve(__dirname, 'src', 'containers'),
+      '@routes': path.resolve(__dirname, 'src', 'routes'),
+      '@locale': path.resolve(__dirname, 'src', 'locale'),
+      '@store': path.resolve(__dirname, 'src', 'store'),
+      '@assets': path.resolve(__dirname, 'src', 'assets'),
       '@src': path.resolve(__dirname, 'src'),
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],

@@ -50,6 +50,24 @@
       "@screens/*": [
         "src/screens/*"
       ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@containers/*": [
+        "src/containers/*"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
+      "@locale/*": [
+        "src/locale/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
       "@src": [
         "src"
       ]

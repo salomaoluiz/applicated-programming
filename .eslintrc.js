@@ -38,7 +38,7 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           'module',
-          '/^@(screens|routes)|src/',
+          '/^@(screens|components|containers|routes|locale|store|assets)|src/',
           ['parent', 'sibling', 'index'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
