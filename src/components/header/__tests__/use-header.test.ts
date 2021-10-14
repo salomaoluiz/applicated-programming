@@ -16,7 +16,7 @@ describe('Components - useHeader', () => {
     test('deve retornar a rota atual', () => {
       const { result } = renderHook(useHeader);
 
-      expect(result.current.currentPath).toEqual('data-structure');
+      expect(result.current.path).toEqual('data-structure');
     });
   });
 

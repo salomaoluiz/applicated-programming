@@ -16,14 +16,14 @@ const menuList = new Map<string, MenuListMapValues>([
 ]);
 
 const Header = () => {
-  const { onClick, currentPath } = useHeader();
+  const { onClick, path } = useHeader();
   return (
     <Layout.Header>
       <Menu
         onClick={onClick}
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={[currentPath]}>
+        defaultSelectedKeys={[path]}>
         {Array.from(menuList).map((menu) => (
           <Menu.Item key={menu[0]}>{translate(menu[1].label)}</Menu.Item>
         ))}

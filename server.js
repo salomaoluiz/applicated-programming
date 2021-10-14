@@ -6,8 +6,6 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
 app.set('port', process.env.PORT || 4000);
 
-const server = app.listen(
-  app.get('port', () => {
-    console.log('listening on port', server.address().port);
-  }),
-);
+const server = app.listen(app.get('port'), () => {
+  console.log('listening on port', server.address().port);
+});
