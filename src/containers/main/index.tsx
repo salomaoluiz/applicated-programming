@@ -1,7 +1,7 @@
 import { Layout } from 'antd';
 import React from 'react';
 
-import Header from '@components/header';
+import Menu from '@components/menu';
 
 interface Props {
   children: JSX.Element;
@@ -9,7 +9,7 @@ interface Props {
 const Main = (props: Props) => {
   return (
     <Layout>
-      <Header />
+      <Menu />
       {props.children}
     </Layout>
   );

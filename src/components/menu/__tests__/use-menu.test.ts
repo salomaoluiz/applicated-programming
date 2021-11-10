@@ -1,11 +1,11 @@
 import { act, renderHook } from '@testing-library/react-hooks';
 import * as reactRouter from 'react-router';
 
-import useHeader from '../use-header';
+import useMenu from '../use-menu';
 
 jest.mock('react-router');
 
-describe('Components - useHeader', () => {
+describe('Components - useMenu', () => {
   const historyPush = jest.fn();
   jest.spyOn(reactRouter, 'useHistory').mockReturnValue({
     push: historyPush,
@@ -14,7 +14,7 @@ describe('Components - useHeader', () => {
 
   describe('Ao renderizar o hook', () => {
     test('deve retornar a rota atual', () => {
-      const { result } = renderHook(useHeader);
+      const { result } = renderHook(useMenu);
 
       expect(result.current.path).toEqual('data-structure');
     });
@@ -22,7 +22,7 @@ describe('Components - useHeader', () => {
 
   describe('Dado que eu clico em no menu', () => {
     test('devo navegar para aquela rota', () => {
-      const { result } = renderHook(useHeader);
+      const { result } = renderHook(useMenu);
 
       act(() => {
         result.current.onClick({ key: 'home' });
