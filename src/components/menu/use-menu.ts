@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router';
 
-const useHeader = () => {
+const useMenu = () => {
   const history = useHistory();
 
   const path = history.location.pathname.replace('/', '') || 'home';
@@ -12,4 +12,4 @@ const useHeader = () => {
   return { onClick, path };
 };
 
-export default useHeader;
+export default useMenu;
